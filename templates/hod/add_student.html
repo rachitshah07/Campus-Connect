@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-12">
+       <div class="card">
+          <div class="card-body">
+             <form method="post" action="{% url "add_student" %}" enctype="multipart/form-data">
+                {% comment %} <div class="row"> {% endcomment %}
+                    {% csrf_token %}
+                   <div class="col-12">
+                      <h5 class="form-title"><span>Add Student</span></h5>
+                   </div>
+                  {%include 'includes/messages.html'%}
+                   <div class="col-12 col-sm-8">
+                      <div class="form-group">
+                         <label>Profile Picture</label>
+                         <input type="file" class="form-control" required name="profile_pic">
+                      </div>
+                   </div>
+                   <div class="col-12 col-sm-8">
+                      <div class="form-group">
+                         <label>First Name</label>
+                         <input type="text" class="form-control" required name="first_name">
+                      </div>
+                   </div>
+                   <div class="col-12 col-sm-8">
+                      <div class="form-group">
+                         <label>Last Name</label>
+                         <input type="text" class="form-control" required name="last_name">
+                      </div>
+                   </div>
+                 <div class="col-12 col-sm-8">
+                    <div class="form-group">
+                       <label>UserName</label>
+                       <input type="text" class="form-control" required name="username">
+                    </div>
+                 </div>
+                 <div class="col-12 col-sm-8">
+                    <div class="form-group">
+                       <label>Email</label>
+                       <input type="text" class="form-control" required name="email" >
+                    </div>
+                 </div>
+                 <div class="col-12 col-sm-8">
+                    <div class="form-group">
+                       <label>Password</label>
+                       <input type="password" class="form-control" required name="password">
+                    </div>
+                 </div>
+                 <div class="col-12 col-sm-8">
+                    <div class="form-group">
+                       <label>Address</label>
+                       <textarea class="form-control" required name = "address"></textarea>
+                    </div>
+                 </div>
+                 <div class="col-12 col-sm-8">
+                    <div class="form-group">
+                       <label>Gender</label>
+                       <select class="form-control" required name="gender">
+                        {% comment %} Gender field is static {% endcomment %}
+                          <option>Select Gender</option>
+                          <option value="Female">Female</option>
+                          <option value="Male">Male</option>
+                          <option value="Others">Other</option>
+                       </select>
+                    </div>
+                 </div>
+                 <div class="col-12 col-sm-8">
+                    <div class="form-group">
+                       <label>Course</label>
+                       <select class="form-control" required name="course_id">
+                          <option>Select Course</option>
+                          {% for c in course %}
+                          <option value={{c.id}}>{{c.name}}</option>
+                        {% endfor %}
+                       </select>
+                    </div>
+                 </div>
+                 <div class="col-12 col-sm-8">
+                  <div class="form-group">
+                     <label>Academic Year</label>
+                     <select class="form-control"  name = "session_year_id">
+                        <option>Select Academic Year</option>
+                        {% for s in session_year %}
+                        <option value={{s.id}}>{{s.session_start}} to {{s.session_end}}</option>
+                      {% endfor %}
+                     </select>
+                  </div>
+               </div>
+                 
+               </div>
+            
+                   <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Add Student</button>
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+ </div>
+<div>
+
+
+
+ {% endblock %}
