@@ -5,7 +5,6 @@ CampusConnect is a comprehensive Django-based campus management system that stre
 ## Table of Contents
 
 - [Features](#features)
-- [Project Structure](#project-structure)
 - [Installation and Setup](#installation-and-setup)
 - [Usage](#usage)
 - [Customization](#customization)
@@ -43,46 +42,6 @@ CampusConnect is a comprehensive Django-based campus management system that stre
 - **Feedback:** Provide feedback.
 - **Attendance:** View attendance records for enrolled subjects.
 - **Results:** View and download results as a PDF.
-
-## Project Structure
-
-CampusConnect/
-├── CampusConnect/
-│ ├── **init**.py
-│ ├── asgi.py
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
-├── core/
-│ ├── **init**.py
-│ ├── admin.py
-│ ├── apps.py
-│ ├── models.py
-│ ├── EmailBackend.py
-│ ├── Hod_Views.py
-│ ├── Staff_Views.py
-│ ├── Student_Views.py
-│ ├── urls.py
-│ └── views.py
-├── templates/
-│ ├── hod/
-│ │ ├── dashboard.html
-│ │ └── ...
-│ ├── staff/
-│ │ ├── dashboard.html
-│ │ └── ...
-│ └── student/
-│ ├── dashboard.html
-│ └── ...
-├── static/
-│ ├── css/
-│ │ └── ...
-│ ├── js/
-│ │ └── ...
-│ └── img/
-│ └── ...
-├── requirements.txt
-└── manage.py
 
 ## Installation and Setup
 
