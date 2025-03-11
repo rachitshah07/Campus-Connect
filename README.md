@@ -121,6 +121,22 @@ Customize data models in `models.py` and extend views in `Hod_Views.py`, `Staff_
 
 Update or reorganize the HTML templates located in the `templates/` directory to change the UI/UX for each user role (HOD, Staff, Student).
 
-### Email Integration
+### Email Integration (Google Mail App)
 
-Modify email settings and templates in the views (for example, in `Hod_Views.py` for sending notifications) to suit your mailing requirements. You can configure SMTP or other email providers by adjusting your Django `settings.py` or `.env` file.
+The project integrates **Google's Email App (Gmail SMTP)** for sending automated emails, such as:
+
+- User account verification and password resets.
+- Notifications for attendance updates, leave applications, and feedback responses.
+
+To configure Gmail SMTP:
+
+1. Enable **Less Secure Apps** or **App Passwords** in your Google account.
+2. Update your `settings.py` with the following SMTP configuration:
+   ```python
+   EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+   EMAIL_HOST = 'smtp.gmail.com'
+   EMAIL_PORT = 587
+   EMAIL_USE_TLS = True
+   EMAIL_HOST_USER = 'your-email@gmail.com'
+   EMAIL_HOST_PASSWORD = 'your-app-password'
+   ```
