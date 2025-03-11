@@ -47,24 +47,24 @@ CampusConnect is a comprehensive Django-based campus management system that stre
 ## Project Structure
 
 CampusConnect/
-├── CampusConnect/ # Django project settings, wsgi, asgi, etc.
+├── CampusConnect/
 │ ├── **init**.py
 │ ├── asgi.py
 │ ├── settings.py
 │ ├── urls.py
 │ └── wsgi.py
-├── core/ # Main Django app containing:
+├── core/
 │ ├── **init**.py
-│ ├── admin.py # Admin customizations and model registration
+│ ├── admin.py
 │ ├── apps.py
-│ ├── models.py # Data models (CustomUser, Course, Session_Year, etc.)
-│ ├── EmailBackend.py # Custom authentication backend using email
-│ ├── Hod_Views.py # Views for HOD functionalities
-│ ├── Staff_Views.py # Views for Staff functionalities
-│ ├── Student_Views.py # Views for Student functionalities
-│ ├── urls.py # URL routing for all application views
-│ └── views.py # Shared views (login, profile, etc.)
-├── templates/ # HTML templates organized by role (hod, staff, student)
+│ ├── models.py
+│ ├── EmailBackend.py
+│ ├── Hod_Views.py
+│ ├── Staff_Views.py
+│ ├── Student_Views.py
+│ ├── urls.py
+│ └── views.py
+├── templates/
 │ ├── hod/
 │ │ ├── dashboard.html
 │ │ └── ...
@@ -74,15 +74,15 @@ CampusConnect/
 │ └── student/
 │ ├── dashboard.html
 │ └── ...
-├── static/ # Static files (CSS, JS, images, etc.)
+├── static/
 │ ├── css/
 │ │ └── ...
 │ ├── js/
 │ │ └── ...
 │ └── img/
 │ └── ...
-├── requirements.txt # List of dependencies required to run the project
-└── manage.py # Django management script
+├── requirements.txt
+└── manage.py
 
 ## Installation and Setup
 
